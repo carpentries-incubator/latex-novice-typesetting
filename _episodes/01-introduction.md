@@ -16,3 +16,7 @@ keypoints:
 FIXME
 
 {% include links.md %}
+
+$$
+x_{ij} \sim N(0, 1)
+$$
