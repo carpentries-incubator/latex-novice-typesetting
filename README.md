@@ -80,3 +80,4 @@ To cite this lesson, please consult with [CITATION](CITATION)
 [change-default-branch]: https://docs.github.com/en/github/administering-a-repository/changing-the-default-branch
 [community-lessons]: https://carpentries.org/community-lessons
 [lesson-example]: https://carpentries.github.io/lesson-example
+
