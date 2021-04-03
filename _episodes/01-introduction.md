@@ -20,3 +20,5 @@ FIXME
 $$
 x_{ij} \sim N(0, 1)
 $$
+
+Inline $m(ath)$
