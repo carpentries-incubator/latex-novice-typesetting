@@ -99,6 +99,7 @@ exclude:
 # Turn on built-in syntax highlighting.
 highlighter: rouge
 
+math: yes
 
 # Remote theme
 remote_theme: Alanocallaghan/carpentries-theme
