@@ -2,9 +2,12 @@
 
 We are now going to actually typeset some text. You'll need to upload the `brawl_at_allen.txt`, `troubadour.jpeg`, `battle.jpeg`, and `trial.jpeg` files, which you can download from [here](https://github.com/carpentries-incubator/latex-novice-typesetting/blob/gh-pages/data/).
 
-We're going to create a new document, which we will call `story.tex`. This time, we will actually get a blank document from Overleaf (because we didn't start a new project), so we're going to have to remember the necessary parts of the document structure.
+We are first going to renamed the current `main.tex` document to `old.tex`; then, we're going to create a new document, which we will call `main.tex`. This time, we will actually get a blank document from Overleaf (because we didn't start a new project), so we're going to have to remember the necessary parts of the document structure.
+
+We are renaming the old file because Overleaf will automatically compile `main.tex`, even if we hit compile with a different file open in the editor; otherwise, we would have to swap back and forth between files a lot.
 
 ```latex
+% in main.tex
 \documentclass{book}
 \usepackage[utf8]{inputenc}
 
@@ -45,7 +48,7 @@ The end of days
 1. Or, we can keep the text in a separate document (like `brawl_at_allen.txt`) and use a command to insert it (similar to what we did with `lipsum`, before):
 
 ```latex
-% in story.tex
+% in main.tex
 \documentclass{book}
 \usepackage[utf8]{inputenc}
 
@@ -56,7 +59,7 @@ The end of days
 \begin{document}
 \maketitle
 
-\input{brawl_at_allen.txt} % this must have the file path as its argument
+\input{brawl_at_allen.tex} % this must have the file path as its argument
 
 \end{document}
 ```
@@ -92,10 +95,10 @@ The `\chapter{}` command takes one argument—the chapter title. We do not need 
 
 Now add the other two `\chapter{}` commands. (The 'find' option might be helpful here.)
 
-Once all four commands have been added, we can add the `\tableofcontents` command in `story.tex` and the headings will automatically appear there.
+Once all four commands have been added, we can add the `\tableofcontents` command in `main.tex` and the headings will automatically appear there.
 
 ```latex
-% in story.tex
+% in main.tex
 \begin{document}
 \maketitle
 
@@ -105,34 +108,88 @@ Once all four commands have been added, we can add the `\tableofcontents` comman
 
 The `\tableofcontents` command does not take any arguments.
 
-### Illustrations
+### Bold and italicised text and footnotes
 
-We've now got a pretty reasonable-looking document. Let's see about adding in some images.
+Making text bold or italicised is done using some new commands: `\textbf{}` and `\textit{}`. The text to be formatted is given as an argument to the command.
 
-We're going to be using a command called `\includegraphcs[]{}`. It can take many different options, and requires one argument—the path to the image file.
-
-In Chapter 1, *The Banquet*, we are going to add `troubadour.jpeg`.
+There is a note about the text found at the beginning of Chapter 2; let's place that in italics to offset it more, and but the word 'Note:' in bold.
 
 ```latex
 % in brawl_at_allen.tex
-\chapter{The Banquet}
+\chapter{The Battle}
 
-\includegraphics[]{troubadour}
+\textbf{Note:} \textit{This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}
 ```
 
-When this is rendered, the image should appear, but its placement is not going to be ideal. Inserting an image in this way means that the image must appear before any of the text in Chapter 1, **no matter what; even if it makes the document look ugly.**
+This formatting helps differentiate the note from the rest of the text.
 
-If we don't want this rigid behaviour, we can use a new environment, called a `float`. Floats come in two flavours: `figure`, and `table`. We will use the `figure` version.
-
-The `figure` environment requires a `\begin{}` and `\end{}` statement, just like the `document` environment.
+Another option would be to place this in a footnote. This is done with the `\footnote{}` command. The argument will be the text of the footnote. (We could leave the bold/italics, but will remove them for now.)
 
 ```latex
-\begin{figure}
-    \centering
-    \includegraphics[]{troubadour}
-    %\caption{Caption}
-    %\label{fig:my_label}
-\end{figure}
+% in brawl_at_allen.tex
+\chapter{The Battle}
+
+\footnote{This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}
 ```
 
-Now, when the document is compiled, the figure will fit into the document more naturally.
+This places the text of the footnote down at the bottom of the page, but the footnote indicator is placed a bit awkwardly. We probably actually want to have it appear after the chapter title.
+
+Placing the footnote command after the `}` does not fix the problem; we probably need to place it inside the curly braces.
+
+```latex
+% in brawl_at_allen.tex
+\chapter{The Battle\footnote{This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}}
+```
+
+This throws an error. Because we didn't get it before, we know it must be a result of the new placement of the footnote command. $\LaTeX$ error messages can be hard to decipher, but in this instance the error is caused because chapter headings are not like regular text. Their appearance at the beginning of a chapter, in the Table of Contents, and in page headers is all formatted very specifically and including a footnote in the argument to the `\chapter{}` command messes some of that up.
+
+In order to resolve this, we can add an option to the `\chapter{}` command that specifies an alternate version of the title, without the footnote.
+
+```latex
+% in brawl_at_allen.tex
+\chapter[The Battle]{The Battle\footnote{This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}}
+  ```
+
+This option creates what is called a *chaptermark* for *The Battle* that doesn't include the footnote. Chapter- and sectionmarks are used in the Table of Contents and in page headers. While we are using it to accommodate a footnote, they can also be used to provide shortened versions of long titles.
+
+
+##  Exercise 1
+
+Decide which of these are valid ways to input text into a document:
+
+1.
+```latex
+\section{Lyrics}
+When the wind picked up the fire spread
+And the grapevines seemed left for dead
+And the northern sky looked like the end of days
+The end of days
+```
+
+1.
+```latex
+\section{Lyrics}
+\input{grapevine_fires.tex}
+```
+
+1.
+```latex
+\section{Lyrics}
+\insert{grapevine_fires.tex}
+```
+
+1.
+```latex
+\section{Lyrics}
+\include{grapevine_fires.tex}
+```
+
+## Answer
+
+All of these are valid, except for `\insert{grapevine_fires.tex}`.
+
+The first option just places the text where it is typed.
+
+The second, is what we have used above to insert `brawl_at_allen.tex` into our document.
+
+We have not encountered `\include{}` in this lesson, but it is valid, so it's a bit of a trick option. Functionally, `\include{}` works similarly to `\input{}`, although it creates additional pagebreaks.
