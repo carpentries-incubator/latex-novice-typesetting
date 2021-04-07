@@ -1,5 +1,5 @@
 ---
-title: "llustrations"
+title: "Illustrations"
 teaching: 0
 exercises: 0
 questions:
