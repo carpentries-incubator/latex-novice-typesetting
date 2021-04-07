@@ -13,7 +13,7 @@ objectives:
 - "Fourth learning objective. Be able to add a footnote in the correct place."
 keypoints:
 - "First key point. Headings are automatically numbered in the correct order and added to the Table of Contents."
-- "Second key point. `\textbf{}` and `\textt{}` format text given to them as an argument. `\bfseries` and `\itshape` format all of the text following them, or within a specified environment."
+- "Second key point. `\\textbf{}` and `\\textt{}` format text given to them as an argument. `\\bfseries` and `\\itshape` format all of the text following them, or within a specified environment."
 - "Third key point. A separate 'mark' can be created for chapters, sections, or other named headings that consists of a shorter version of the name for use in headers and the Table of Contents."
 ---
 
@@ -91,7 +91,7 @@ The right depends on how you like to work, and the project at hand. For now, we'
 
 ### Formatting
 
-Sometimes you might be actively writing a document and doing formatting-type things as you write. This is one way to make a $\Latex$ document. The other is to take text that is already written and simply typeset it. This is what we're going to do now.
+Sometimes you might be actively writing a document and doing formatting-type things as you write. This is one way to make a LaTeX document. The other is to take text that is already written and simply typeset it. This is what we're going to do now.
 
 We previously saw the `\section{}` command in our article example. Our current document is in the document class 'book', so we will be using variations on `\section{}`, called `\part{}` and `\chapter{}`. The book document class defaults to things like: printing front and back, different margins for even and odd pages, and starting every chapter on an odd page.
 
@@ -160,7 +160,7 @@ Placing the footnote command after the `}` does not fix the problem; we probably
 \chapter{The Battle\footnote{This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}}
 ```
 
-This throws an error. Because we didn't get it before, we know it must be a result of the new placement of the footnote command. $\LaTeX$ error messages can be hard to decipher, but in this instance the error is caused because chapter headings are not like regular text. Their appearance at the beginning of a chapter, in the Table of Contents, and in page headers is all formatted very specifically and including a footnote in the argument to the `\chapter{}` command messes some of that up.
+This throws an error. Because we didn't get it before, we know it must be a result of the new placement of the footnote command. LaTeX error messages can be hard to decipher, but in this instance the error is caused because chapter headings are not like regular text. Their appearance at the beginning of a chapter, in the Table of Contents, and in page headers is all formatted very specifically and including a footnote in the argument to the `\chapter{}` command messes some of that up.
 
 In order to resolve this, we can add an option to the `\chapter{}` command that specifies an alternate version of the title, without the footnote.
 

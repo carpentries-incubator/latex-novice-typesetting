@@ -11,8 +11,8 @@ objectives:
 - "Third learning objective. See how to use options to change how inserted images appear."
 keypoints:
 - "First key point. Including an image requires the use of a command, and possibly a `figure` environment, an the specification of the path to the image (which may be more than just the filename, if the image is in a subdirectory)."
-- "Second key point. Floats are placed by $\LaTeX$ in locations that will look nice; this is determined by a set of rules (that can be modified, if one is so inclined)."
-- "Third key point. The appearance of images can be customised using options to `\includegraphics{}`."
+- "Second key point. Floats are placed by LaTeX in locations that will look nice; this is determined by a set of rules (that can be modified, if one is so inclined)."
+- "Third key point. The appearance of images can be customised using options to `\\includegraphics{}`."
 - "Fourth key point. Captions are short descriptions of an image. Labels are a way to refer to them within the text."
 ---
 
@@ -93,7 +93,7 @@ This package gives us a new environment, called `landscape`. We need to place th
 ```latex
 \chapter{The Trial}
 
-\begin{landscape}
+\begin{landscape} 
 \begin{figure}
     \centering
     \includegraphics[]{trial}
