@@ -20,7 +20,7 @@ keypoints:
 
 We've now got a pretty reasonable-looking document. Let's see about adding in some images.
 
-We're going to be using a command called `\includegraphcs[]{}`. It can take many different options, and requires one argument—the path to the image file. This command comes from the `graphicx` package, which we will also need to include
+We're going to be using a command called `\includegraphcs[]{}`. It can take many different options, and requires one argument—the path to the image file. This command comes from the `graphicx` package, which we will also need to include.
 
 In Chapter 1, *The Banquet*, we are going to add `troubadour.jpeg`.
 
@@ -41,7 +41,7 @@ If we don't want this rigid behaviour, we can use a new environment, called a `f
 
 The `figure` environment requires a `\begin{}` and `\end{}` statement, just like the `document` environment. Overleaf will autofill some of the different parts of this, as well.
 
-The image will be automatically centred with `\centering`, and caption and label commands will also appear; these are optional, but helpful. The caption can be given a short description of the image as an argument; the label makes it possible to cross-reference the image in the text. We'll look cross-references later on. For now, you can leave the label as the default, or pick something short and descriptive.
+The image will be automatically centred with `\centering`, and caption and label commands will also appear; these are optional, but helpful. The caption can be given a short description of the image as an argument; the label makes it possible to cross-reference the image in the text. We'll look at cross-references later on. For now, you can leave the label as the default, or pick something short and descriptive.
 
 ```latex
 \begin{figure}
