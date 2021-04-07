@@ -1,3 +1,22 @@
+---
+title: "Introduction"
+teaching: 0
+exercises: 0
+questions:
+- "Key question: How can I create headings for different things?"
+- "Key question: How can I format text into boldface, or italics?"
+- "Key question: How can I add a footnote to indicate important information?"
+objectives:
+- "First learning objective. Be able to create headings."
+- "Second learning objective. Understand how to add a Table of Contents."
+- "Third learning objective. Learn that there are two different ways to create boldface and italicised text."
+- "Fourth learning objective. Be able to add a footnote in the correct place."
+keypoints:
+- "First key point. Headings are automatically numbered in the correct order and added to the Table of Contents."
+- "Second key point. `\textbf{}` and `\textt{}` format text given to them as an argument. `\bfseries` and `\itshape` format all of the text following them, or within a specified environment."
+- "Third key point. A separate 'mark' can be created for chapters, sections, or other named headings that consists of a shorter version of the name for use in headers and the Table of Contents."
+---
+
 # Basic typesetting
 
 We are now going to actually typeset some text. You'll need to upload the `brawl_at_allen.txt`, `troubadour.jpeg`, `battle.jpeg`, and `trial.jpeg` files, which you can download from [here](https://github.com/carpentries-incubator/latex-novice-typesetting/blob/gh-pages/data/).
@@ -118,10 +137,10 @@ There is a note about the text found at the beginning of Chapter 2; let's place 
 % in brawl_at_allen.tex
 \chapter{The Battle}
 
-\textbf{Note:} \textit{This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}
+\textbf{Note:} \textit{This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}\\
 ```
 
-This formatting helps differentiate the note from the rest of the text.
+This formatting helps differentiate the note from the rest of the text. The double slash at the end creates a linebreak, which physically separates the note from the rest of the chapter.
 
 Another option would be to place this in a footnote. This is done with the `\footnote{}` command. The argument will be the text of the footnote. (We could leave the bold/italics, but will remove them for now.)
 
@@ -153,43 +172,73 @@ In order to resolve this, we can add an option to the `\chapter{}` command that 
 This option creates what is called a *chaptermark* for *The Battle* that doesn't include the footnote. Chapter- and sectionmarks are used in the Table of Contents and in page headers. While we are using it to accommodate a footnote, they can also be used to provide shortened versions of long titles.
 
 
-##  Exercise 1
-
-Decide which of these are valid ways to input text into a document:
-
-1.
-```latex
-\section{Lyrics}
-When the wind picked up the fire spread
-And the grapevines seemed left for dead
-And the northern sky looked like the end of days
-The end of days
-```
-
-1.
-```latex
-\section{Lyrics}
-\input{grapevine_fires.tex}
-```
-
-1.
-```latex
-\section{Lyrics}
-\insert{grapevine_fires.tex}
-```
-
-1.
-```latex
-\section{Lyrics}
-\include{grapevine_fires.tex}
-```
-
-## Answer
-
-All of these are valid, except for `\insert{grapevine_fires.tex}`.
-
-The first option just places the text where it is typed.
-
-The second, is what we have used above to insert `brawl_at_allen.tex` into our document.
-
-We have not encountered `\include{}` in this lesson, but it is valid, so it's a bit of a trick option. Functionally, `\include{}` works similarly to `\input{}`, although it creates additional pagebreaks.
+> ##  Exercise 1
+>
+> Decide which of these are valid ways to input text into a document:
+>
+> 1.
+> ```latex
+> \section{Lyrics}
+> When the wind picked up the fire spread
+> And the grapevines seemed left for dead
+> And the northern sky looked like the end of days
+> The end of days
+> ```
+>
+> 1.
+> ```latex
+> \section{Lyrics}
+> \input{grapevine_fires.tex}
+> ```
+>
+> 1.
+> ```latex
+> \section{Lyrics}
+> \insert{grapevine_fires.tex}
+> ```
+>
+> 1.
+> ```latex
+> \section{Lyrics}
+> \include{grapevine_fires.tex}
+> ```
+>
+> > ## Answer
+> >
+> > All of these are valid, except for `\insert{grapevine_fires.tex}`.
+> >
+> > The first option just places the text where it is typed.
+> >
+> > The second, is what we have used above to insert `brawl_at_allen.tex` into our document.
+> >
+> > We have not encountered `\include{}` in this lesson, but it is valid, so it's a bit of a trick option. Functionally, `\include{}` works similarly to `\input{}`, although it creates additional pagebreaks.
+> > {: .tex}
+> {: .solution}
+{: .challenge}
+>
+>
+> ## Challenge
+> 1. `\textbf{}` and `\textit{}` are *commands* that change the style of text. There is another way to tell $\LaTeX$ that text should be bold or italicised; this is with the `\bfseries` and `\itshape` *declarations*. Declarations do not take an argument, instead, they modify all of the text that follows them, or is within their *environment*.
+>
+> Try inserting one of these declarations just after the `\begin{document}` line and observe what happens.
+>
+> Once you have, place the declaration inside of curly braces, as if it were the argument for a command, and adding some text after it:
+>
+> ```latex
+> {\itshape  War with the Newts}
+> ```
+>
+> Now, the declaration only affects the text inside the curly braces.
+>
+>
+> ## Challenge
+> 1. Use the `\itshape` and `\bfseries` declarations to typeset the note at the beginning of Chapter 2; (you can leave the footnote we created as it is and just make this new version appear below the chapter title).
+>
+> > ## Answer
+> > ```latex
+> > % in brawl_at_allen.tex
+> > {\bfseries Note}{\itshape This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}
+> > ```
+> > {: .tex}
+> {: .solution}
+{: .challenge}

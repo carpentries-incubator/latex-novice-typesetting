@@ -13,7 +13,7 @@ objectives:
 keypoints:
 - "First key point. Typesetting is used in many domains to convey information in a more readable format."
 - "Second key point. Creating a new, minimal document requires a document declaration, a preamble, and a document body."
-- "Third key point. LaTeX documents consist of commands, environments, and regular text. Commands may take arguments andor options."
+- "Third key point. LaTeX documents consist of commands, environments, and regular text. Commands may take arguments and/or options."
 ---
 
 

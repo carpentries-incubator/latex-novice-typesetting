@@ -1,3 +1,20 @@
+---
+title: "llustrations"
+teaching: 0
+exercises: 0
+questions:
+- "Key question: How can I add images to my document?"
+- "Key question: How does image placement interact with the surrounding text?"
+objectives:
+- "First learning objective. Place an image at a fixed location."
+- "Second learning objective. Learn the difference between fixed and floating images."
+- "Third learning objective. See how to use options to change how inserted images appear."
+keypoints:
+- "First key point. Including an image requires the use of a command, and possibly a `figure` environment, an the specification of the path to the image (which may be more than just the filename, if the image is in a subdirectory)."
+- "Second key point. Floats are placed by $\LaTeX$ in locations that will look nice; this is determined by a set of rules (that can be modified, if one is so inclined)."
+- "Third key point. The appearance of images can be customised using options to `\includegraphics{}`."
+- "Fourth key point. Captions are short descriptions of an image. Labels are a way to refer to them within the text."
+---
 
 ### Illustrations
 
@@ -100,3 +117,35 @@ It looks like we may also need to scale this image down a bit. Experiment with d
 \end{figure}
 \end{landscape}
 ```
+
+
+> ## Challenge
+>
+> Will this code insert an image at a fixed location, or one whose location is flexible?
+>
+> ```latex
+> \includegraphics[scale=.7]{constellations}
+> ```
+>
+> > ## Answer
+> > This code will insert an image whose location is fixed because it is not inside a floating environment.
+> > {: .tex}
+> {: .solution}
+{: .challenge}
+
+>
+> ## Challenge
+> `\includegraphics[]{}` has many different options it can take. Apply the `angle` option to the first image we added; its value should be a whole number between 0 and 360. You can also try this with the other images; multiple options are specified as a comma-separated list.
+>
+> > ## Answer
+> > ```latex
+> > \begin{figure}
+> >     \centering
+> >     \includegraphics[angle=30]{troubadour}
+> >     \caption{A troubadour, performing}
+> >     \label{fig:troubadour}
+> > \end{figure}
+> > ```
+> > {: .tex}
+> {: .solution}
+{: .challenge}
