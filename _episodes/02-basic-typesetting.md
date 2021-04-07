@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Basic Formatting"
 teaching: 0
 exercises: 0
 questions:
