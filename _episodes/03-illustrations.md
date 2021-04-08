@@ -166,7 +166,7 @@ effectively be multiplied against `\textwidth` to produce the actual width.
 ```
 
 
-> ## Challenge
+> ## Challenge 1
 >
 > Will this code insert an image at a fixed location, or one whose location is flexible?
 >
@@ -181,7 +181,7 @@ effectively be multiplied against `\textwidth` to produce the actual width.
 {: .challenge}
 
 >
-> ## Challenge
+> ## Challenge 2
 > `\includegraphics[]{}` has many different options it can take. Apply the `angle` option to the first image
 > we added; its value should be a whole number between 0 and 360. You can also try this with the other images;
 > multiple options are specified as a comma-separated list.
