@@ -2,7 +2,7 @@
 title: Setup
 ---
 
-For this lesson, you will need an [Overleaf](overleaf.com) account.
+For this lesson, you will need an [Overleaf](https://www.overleaf.com) account.
 A free one will have all of the features you need for the course.
 Overleaf is an online LaTeX editor that is widely used.
 
