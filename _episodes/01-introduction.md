@@ -105,7 +105,7 @@ We'll do this using the `lipsum` package, which provides sample text blocks. We'
 
 > ## Challenge 1
 >
-> Look at the following $\LaTeX$ code and decide if it will compile as written.
+> Look at the following LaTeX code and decide if it will compile as written.
 > If you say no, decide why not.
 >
 > ```latex
