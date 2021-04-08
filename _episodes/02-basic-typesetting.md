@@ -228,7 +228,7 @@ Contents and in page headers. While we are using it to accommodate a footnote,
 they can also be used to provide shortened versions of long titles.
 
 
-> ##  Exercise 1
+> ##  Challenge 1
 >
 > Decide which of these are valid ways to input text into a document:
 >
