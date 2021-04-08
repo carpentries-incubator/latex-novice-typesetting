@@ -272,7 +272,7 @@ they can also be used to provide shortened versions of long titles.
 {: .challenge}
 >
 >
-> ## Challenge
+> ## Challenge 2
 > `\textbf{}` and `\textit{}` are *commands* that change the style of text.
 > There is another way to tell LaTeX that text should be bold or italicised;
 > this is with the `\bfseries` and `\itshape` *declarations*. Declarations
@@ -292,7 +292,7 @@ they can also be used to provide shortened versions of long titles.
 > Now, the declaration only affects the text inside the curly braces.
 >
 >
-> ## Challenge
+> ## Challenge 3
 > Use the `\itshape` and `\bfseries` declarations to typeset the note at
 > the beginning of Chapter 2; (you can leave the footnote we created as it is
 > and just make this new version appear below the chapter title).
