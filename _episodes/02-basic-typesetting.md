@@ -26,9 +26,9 @@ keypoints:
 # Basic typesetting
 
 We are now going to actually typeset some text. You'll need to upload the 
-[`brawl_at_allen.txt`](/data/brawl_at_allen.txt),
-[`troubadour.jpeg`](/data/troubadour.jpeg), [`battle.jpeg`](/data/battle.jpeg),
-and [`trial.jpeg`](/data/trial.jpeg) files,
+[`brawl_at_allen.txt`](../data/brawl_at_allen.txt),
+[`troubadour.jpeg`](../data/troubadour.jpeg), [`battle.jpeg`](../data/battle.jpeg),
+and [`trial.jpeg`](../data/trial.jpeg) files,
 which you can download from the hyperlinks embedded here.
 
 
